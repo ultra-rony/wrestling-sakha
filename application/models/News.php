@@ -37,4 +37,13 @@ class News extends CI_Model
             ->get()
             ->row_array();
     }
+
+    public function getKey($key)
+    {
+        $keys = $this->db->from("news n")
+            ->where("n.key =", $key)
+            ->get()
+            ->result_array();
+        return (count($keys) > 0) ? false : true;
+    }
 }

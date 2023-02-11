@@ -8,8 +8,8 @@ class AddNews extends Service {
     {
         $data = $this->getData();
 
-        $resp = $this->news->add($data['dt']['add_news']);
-        if ((int)$resp != null) {
+        if ($this->news->getKey($data['dt']['add_news']['key'])) {
+            $this->news->add($data['dt']['add_news']);
             $data['response'] = $this->sup->getResponse(true);
         }
         print(json_encode($data['response']));

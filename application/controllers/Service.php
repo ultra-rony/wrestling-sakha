@@ -22,7 +22,8 @@ class Service extends CI_Controller {
                 'images' => $s['images'] ?? null,
                 'date_added' => $data['current_time'],
                 'status' => 1,
-                'link' => $s['link'] ?? null
+                'link' => $s['link'] ?? null,
+                'key' => $s['key'] ?? null
             ),
         );
         return array(
