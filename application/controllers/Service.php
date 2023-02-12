@@ -18,7 +18,7 @@ class Service extends CI_Controller {
             'add_news' => array(
                 'id' => null,
                 'title' => $s['title'] ?? null,
-                'description' => $s['description'] ?? null,
+                'text' => $s['text'] ?? null,
                 'images' => $s['images'] ?? null,
                 'date_added' => $data['current_time'],
                 'status' => 1,

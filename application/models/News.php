@@ -31,7 +31,7 @@ class News extends CI_Model
     
     public function getFull($newsId)
     {
-        return $this->db->select("n.id,n.title,n.date_added,n.images,n.description,n.link")
+        return $this->db->select("n.id,n.title,n.date_added,n.images,n.text,n.link")
             ->from("news n")
             ->where("n.id", (int)$newsId)
             ->get()
